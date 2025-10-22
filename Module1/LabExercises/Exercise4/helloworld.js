@@ -1,5 +1,4 @@
 function Sum(a, b){
-    console.log(a + b);
     return a + b;
 }
 function Multiply(a, b){
@@ -13,8 +12,8 @@ function Divide(a, b){
 }
 
 console.log(Sum(5, 1));
-console.log(Subtract(5, 1));
-console.log(Divide(5, 1));
+console.log(Subtract(8, 3));
+console.log(Divide(12, 4));
 console.log(Multiply(Sum(2, 3), Sum(11, 5)));
 
 

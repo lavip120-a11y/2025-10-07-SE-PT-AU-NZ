@@ -10,12 +10,14 @@
         <h1>Roll the Dice</h1>
     </header>
      <p> Use the following virtual dice roller to roll the dice. <br> You can choose from a dice with the value of 6 or a value of 10. <br> Select the relevant dice and click button to roll the dice</p>
-    <section>
+    
+     <section>
         <select id="selectDice">
-            <option>6</option>
-            <option>10</option>
+            <option value="6">6</option>
+            <option value="10">10</option>
         </select>
-        <button onclick="document.getElementById('selectedDice').innerText = getRndInteger(1,10)">Roll Dice</button>
+
+        <button onclick="document.getElementById('selectedDice').innerHTML = getRndInteger(1,10)">Roll Dice</button>
               
         <section>
             <p id='selectedDice'></p>
@@ -24,13 +26,14 @@
 
    <script>
     function RollDice() {
-        document.getElementById('selectedDice').innerText = document.getElementById("selectDice").value
+        document.getElementById('selectedDice').innerHTML = document.getElementById("selectDice").value
     }
-
+    
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     
     // add unit testing here
+
     }
 
     </script>

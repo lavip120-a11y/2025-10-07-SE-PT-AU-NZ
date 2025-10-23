@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Generator</title>
+
+<body>
+    <header>
+        <h1>Roll the Dice</h1>
+    </header>
+     <p> Use the following virtual dice roller to roll the dice. <br> You can choose from a dice with the value of 6 or a value of 10. <br> Select the relevant dice and click button to roll the dice</p>
+    <section>
+        <select id="selectDice">
+            <option>6</option>
+            <option>10</option>
+        </select>
+        <button onclick="document.getElementById('selectedDice').innerText = getRndInteger(1,10)">Roll Dice</button>
+              
+        <section>
+            <p id='selectedDice'></p>
+        </section>
+    </section>
+
+   <script>
+    function RollDice() {
+        document.getElementById('selectedDice').innerText = document.getElementById("selectDice").value
+    }
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    
+    // add unit testing here
+    }
+
+    </script>
+
+</body>
+
+</html>

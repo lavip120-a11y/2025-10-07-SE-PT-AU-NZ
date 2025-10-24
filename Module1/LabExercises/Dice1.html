@@ -17,7 +17,7 @@
             <option value="10">10</option>
         </select>
 
-        <button onclick="document.getElementById('selectedDice').innerHTML = getRndInteger(1,10)">Roll Dice</button>
+        <button onclick="RollDice()">Roll Dice</button>
               
         <section>
             <p id='selectedDice'></p>
@@ -26,7 +26,9 @@
 
    <script>
     function RollDice() {
-        document.getElementById('selectedDice').innerHTML = document.getElementById("selectDice").value
+       document.getElementById("selectedDice").innerText = getRndInteger(1, document.getElementById("selectDice").value)
+
+
     }
     
     function getRndInteger(min, max) {
@@ -34,6 +36,17 @@
     
     // add unit testing here
 
+    }
+
+    //Unit test1 for getRndInteger(min, max)
+
+    function Test1()
+    {
+        let result = getRndInteger(1, 6)
+        if(result >= 1 && result<=6)
+            console.log("Test passed")
+        else
+            console.log("Test failed")
     }
 
     </script>

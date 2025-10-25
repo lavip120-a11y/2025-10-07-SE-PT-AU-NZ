@@ -60,7 +60,7 @@
             <p id='selectedDice'></p>
         </section>
         <section>
-            <img src="/2025-10-07-SE-PT-AU-NZ/Module1/ClassExercises/Images/Dice.webp" alt="Dice"
+            <img src="/Module1/ClassExercises/Images/Dice.webp" alt="Dice"
             height="100"
             width="100">
         </section>
@@ -77,14 +77,24 @@
 
     }
 
-        
-
+     
     //Unit test1 for getRndInteger(min, max)
 
     function Test1()
     {
         let result = getRndInteger(1, 6)
         if(result >= 1 && result<=6)
+            console.log("Test passed")
+        else
+            console.log("Test failed")
+    }
+
+    //Unit test2 for getRndInteger(min, max)
+
+    function Test1()
+    {
+        let result = getRndInteger(1, 10)
+        if(result >= 1 && result<=10)
             console.log("Test passed")
         else
             console.log("Test failed")

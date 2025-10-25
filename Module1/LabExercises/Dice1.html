@@ -4,12 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Generator</title>
+<style>
+    body {
+        margin: auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        box-sizing: content-box; 
+        width: 400px;
+        height: 300px;
+        padding: 30px;
+        border-style: double;
+        border-radius: 12px;
+        border: 2px, solid, black;
+        background-color: rgb(177, 225, 158);
+    
+    }
 
+    h1 {
+        text-align: center;
+    }
+    button {
+        background-color: darkslateblue;
+        color: bisque;
+        font-weight: bold;
+    }
+    select {
+        background-color: bisque;
+        font-weight: bold;
+    }
+    section {
+        text-align: center;
+    }
+
+</style>
 <body>
     <header>
         <h1>Roll the Dice</h1>
     </header>
-     <p> Use the following virtual dice roller to roll the dice. <br> You can choose from a dice with the value of 6 or a value of 10. <br> Select the relevant dice and click button to roll the dice</p>
+     <p> <ol>
+        <li>Use the following virtual dice roller to roll the dice.</li> 
+        <li>You can choose from a dice with the value of 6 or a value of 10.</li>
+        <li> Select the relevant dice and click button to roll the dice.</li>
+     </ol>
+    </p>
     
      <section>
         <select id="selectDice">
@@ -22,21 +58,25 @@
         <section>
             <p id='selectedDice'></p>
         </section>
+        <section>
+            <img src="/2025-10-07-SE-PT-AU-NZ/Module1/ClassExercises/Images/Dice.webp" alt="Dice"
+            height="100"
+            width="100">
+        </section>
     </section>
 
    <script>
     function RollDice() {
        document.getElementById("selectedDice").innerText = getRndInteger(1, document.getElementById("selectDice").value)
 
-
     }
     
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
-    
-    // add unit testing here
 
     }
+
+        
 
     //Unit test1 for getRndInteger(min, max)
 

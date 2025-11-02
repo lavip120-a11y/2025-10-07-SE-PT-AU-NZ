@@ -1,0 +1,143 @@
+/* I. Selectors */
+/* Added margin, padding and border to each article element */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+/* using a class selector changed the font color for id style-me1, style-me2 & learnt "shift alt a" will comment add a line comment*/
+.style-me1 {
+  color: red;
+}
+#style-me2 {
+  color: blue;
+}
+/* used a specific selector to change both font colors above to purple - is this what is meant by a specific selector?*/
+.style-me1,
+#style-me2 {
+  color: purple;
+}
+
+/* styled all p elements that are descendants of my-descendants are styled with a red background */
+.my-descendants-are-styled p {
+  background-color: red;
+}
+/* then used a child combinator to style direct children of my children are styled with a background */
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+/* II. Box model and common properties */
+/* set property and values for class box, used background color to see where it starts and finishes. used different syntaxes
+and units to show how to change margin and padding */
+.box {
+  background-color: plum;
+  background-image: url(../assets/images/img1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+/* third box retained its height because it has a style attribute directly attached to it in the index.html file setting its height. 
+ I used the important operator to override it, added border with styles, used vh and vw to see boxes resize with the browser size.tested 
+ box-sizing values, content box shows width and height of content only. border box shows the border, padding and content in the width
+ and height.  changed height and width settings to overflow content from box, tested overflow rule showing content outside of box
+ scrolling to see content, suto which added scrolling automatically amd hidden to hide overflow, then set an outline, border radius to 
+ make an oval and increased padding so that the content was visible. added a background image and experimented with different styles*/
+  padding: 80px;
+  margin: 20px 10px 20px;
+  height: 50% !important;
+  width: 50vw;
+  border: 10px double purple;
+  border-radius: 50%;
+  box-sizing: content-box;
+  overflow: hidden;
+  outline: 10px;
+}
+
+/* III. Positioning */
+/* applied absolute positioning to class position-absolute, fixed it to top of page with top 0 */
+.position-absolute {
+  position: absolute;
+  top: 0;
+  background-color: darkorange;
+}
+/* applied relative positioning to class position-relative, it is positioned in relation to its parent which is relative. absolute position
+is positioned using offset properties...i added left then right position values to the class and it shifts both parent and child to the left
+and then the right */
+.position-relative {
+  position: relative;
+  background-color: deeppink;
+  left: 15px;
+}
+/* i set a sticky position on position-sticky - it did not work "stick" until i added top position to 0 */
+.position-sticky {
+  position: sticky;
+  background-color: deepskyblue;
+  top: 0;
+}
+
+/* IV. Styling text */
+/* i played around with styling text, had a bit of trouble importing fonts but got there in the end. i learnt that serfi has a decorative stroke
+and san serif has none. i experinmented with text-align, center, left, right, justify, letter-spacing and word-spacing, normal and length
+text-transformation, uppercase, lowercase and capitalise, text-decoration, underline, linethrough, overline, wavy */
+.text-style {
+  color: rgb(42, 144, 148);
+  font-size: large;
+  line-height: 2;
+  font-family: "Momo Trust Sans", sans-serif;
+  font-weight: 800;
+  text-align: justify;
+  letter-spacing: 2px;
+  word-spacing: normal;
+  text-transform: uppercase;
+  text-decoration: underline blue 5px;
+
+}
+
+.momo-trust-sans-newfont {
+  font-family: "Momo Trust Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+/* V. Styling links */
+/* i styled links, hover must come after link and visited, active after hover. */
+
+a:link {
+    color: lightgreen;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:visited {
+    color: darkmagenta;
+    font-style: italic;
+}
+a:hover {
+    color: green;
+    text-decoration: overline;
+}
+a:active {
+    color: darkgreen;
+    text-decoration: line-through;
+}
+a:focus {
+    color: blue;
+    text-decoration: underline wavy red;
+}
+
+/* VI. calc() */
+/* i researched calc() and ended up overcomplicating my code */
+.calc-style {
+    width: 100vw;
+    background-color: blanchedalmond;
+    width: calc(100vw - 100px);
+}
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+.fluid-col {
+    display: inline-block;
+        width: calc(100% - 360px);
+}

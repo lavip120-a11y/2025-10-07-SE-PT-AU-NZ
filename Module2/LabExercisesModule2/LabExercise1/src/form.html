@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <header>
+      <!--added an extra a element to link to the index file, tested the links which took me from this file to the index file.-->
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/Module2/LabExercisesModule2/LabExercise1/src/form.html">Home</a>
+        <a href="/Module2/LabExercisesModule2/LabExercise1/src/index.html">Index</a>
+      </nav>
+    </header>
+    <!--added a form with 2 text imputs for first and last name, adding a label for each and wrapped them in a div to stack on top of each other-->
+    <form method="POST" action="http://127.0.0.1:5500/form.html">
+     <div>
+       <label for="First Name">First Name</label>
+      <input type="text" name="First Name" />
+     </div>
+     <div>
+  <label for="Last Name">Last Name</label>
+      <input type="text" name="Last Name" />
+     </div>
+     <!--added 3 radio buttons with label, name and value attributes, wrapped in a div to seperate from the other form fields-->
+    <div>
+      <p>Please select your favourite coding language</p>
+      <input type="radio" id="html" name="Coding_Preference" value="HTML">
+      <label for="html">HTML</label>
+      <input type="radio" id="css" name="Coding_Preference" value="CSS">
+      <label for="css">CSS</label>
+      <input type="radio" id="js" name="Coding_Preference" value="JavaScript">
+      <label for="js">JavaScript</label>
+    </div>
+    <!--added 3 checkboxes with label, name and value attributes, wrapped in a div to seperate from the other form fields-->
+    <div>
+      <p>Select the type of vehicle that you own</p> <!--are id(), name(group name) and value() the same as radio button? what do these fields determine-->
+      <input type="checkbox" id="toyota" name="Vehicle_Type" value="Toyota">
+      <label for="toyota">I have a Toyota</label>
+      <input type="checkbox" id="mazda" name="Vehicle_Type" value="Mazda">
+      <label for="mazda">I have a Mazda</label>
+      <input type="checkbox" id="kia" name="Vehicle_Type" value="Kia">
+      <label for="kia">I have a Kia</label>
+    </div>
+    <!--added a dropdown element using select and option tags, with label, name and value attributes, added a submit button-->
+    <div>
+    <label for="cars">Choose your car:</label>
+    <select id="cars" name="cars">
+      <option value="kia">Kia</option>
+      <option value="toyota">Toyota</option>
+      <option value="mazda">Mazda</option>
+    </select>
+</div>
+<button type="submit">Submit form</button>
+    </form>
+
+    <main></main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>
+<!--inspected both files, edited CSS in the styles tab, in both files, making changes to the appearance of both files.-->

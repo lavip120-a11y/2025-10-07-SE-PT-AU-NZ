@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- added metatags for 5 elements -->
+    <meta charset="UTF=8" />
+    <meta name="description" content="Lab Exercise 1" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="Lovey" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Exercise 1 HTML</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!--added an extra a element to link to the form file, tested the links which took me from this file to the form file.-->
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/Module2/LabExercisesModule2/LabExercise1/src/index.html"
+          >Home</a
+        >
+        <a href="/Module2/LabExercisesModule2/LabExercise1/src/form.html"
+          >Form</a
+        >
+      </nav>
+    </header>
+    <main>
+      <!--added page headline-->
+      <h1>My HTML Learning Journey</h1>
+      <article>
+        <!-- added 3 div's at the beginning of the body section, added an h2 heading as well as lower level headings for each section -->
+        <h2>Learning Elements</h2>
+        <h3>Div Example</h3>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <!-- added 3 span's below the div's, included a heading, observed that block elements use the entire line and start on a new line.  Inline uses only the space required and is mostly used for styling or formatting-->
+        <h3>Span Example</h3>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <!-- added p and pre tags, included a heading.  Learnt that pre tag will copy your text in the exact way that your input it whereas p tag formats the text. -->
+        <h3>Paragraph Example</h3>
+        <p>p represents paragraph without preserving spacing</p>
+        <h3>Pre example</h3>
+        <pre>
+Text in         a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre
+        >
+        <!-- ctrl+K+F does not autoformat on my laptop but i did learn that Shift Alt F does.-->
+        <!-- added an unordered list of 4 items using a shortcut that i learnt, ol>li*4 will add four list tags at once-->
+        <h4>Unordered List</h4>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ul>
+        <!-- added an ordered list of 3 items using ol and li and included a nested list of 2 items, added the ol type of "i" for roman numerals-->
+        <h4>Ordered List</h4>
+        <ol>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+          <ol type="i">
+            <li>Trio</li>
+            <li>Tripod</li>
+          </ol>
+        </ol>
+        <!-- wrapped all elements created in an article tag-->
+      </article>
+      <!--added another article tag with an h2 heading and added a table, copying the tr tag below the first row, added basic styling from instructions.  Used rowspan and colspan to 
+      even out the table after creating an additional cell in one row-->
+      <article>
+        <h2>HTML elements - Tables - table, thead, tbody, tr, td, th</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>Maria Sanchez</td>
+            <td>28</td>
+            <td>third cell</td>
+          </tr>
+          <tr>
+            <td>Michael Johnson</td>
+            <td rowspan="2">34</td>
+            <td>third cell</td>
+          </tr>
+          <tr>
+            <td>Thomas Smith</td>
+            <td>39</td>
+          </tr>
+        </table>
+      </article>
+      <!-- added a new article tag with another h2 heading. added images changing height and width to resize so they are the same-->
+      <article>
+        <h2>HTML elements - img, video, audio</h2>
+        <img src="https://picsum.photos/600/400" alt="Forever Changing" />
+        <img
+          src="/Module2/LabExercisesModule2/LabExercise1/src/assets/html_lab_image.jpg"
+          width="600"
+          height="400"
+          alt="Skies"
+        />
+        <!--added a video and audio file, gave the audio file a caption using figure and figcaption. Removed controls and added autoplay -->
+        <video autoplay width="250">
+          <source
+            src="/Module2/LabExercisesModule2/LabExercise1/src/assets/flower.webm"
+            type="video/webm"
+          />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figure>
+          <figcaption>Listen to T Rex roar!</figcaption>
+          <audio
+            autoplay
+            src="/Module2/LabExercisesModule2/LabExercise1/src/assets/t-rex-roar.mp3"
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </figure>
+      </article>
+    </main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>

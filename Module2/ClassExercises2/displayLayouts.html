@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Display Layouts</title>
+</head>
+<style>
+    .parentdiv {
+        display: inline-block; /* parent occupies inline, change to block and it will take the entire line*/
+        border: 2px solid blue;
+    }
+
+    .childdiv {
+        display: inline-block; /* child occupies inline space, if changed to block it will take up the entire space*/
+        border: 1px solid blue;
+        
+    }
+    .floatingimage {
+        float: right;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="parentdiv">
+        <div class="childdiv">
+            First
+        </div>
+        <div class="childdiv">
+            Second
+        </div>
+        <div class="childdiv">
+            Third
+        </div>
+        <div class="childdiv">
+            Fourth
+        </div>
+    </div>
+    <div class="floatingimage">
+        <img src="/Module2/ClassExercises2/th.jpg">
+        This image is about the beauty of a foreign country
+    </div>
+</body>
+</html>

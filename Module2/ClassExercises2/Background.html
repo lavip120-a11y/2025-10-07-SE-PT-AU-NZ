@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+</head>
+
+<style>
+    body {
+        color: blue;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(/Module2/ClassExercises2/pexels-mccutcheon-1191710.jpg);
+    }
+   /*--psuedo classes*/
+    button:hover {
+        background-color: orange;
+    }
+    input:focus {
+        background-color: red;
+    }
+    a:link {
+        background-color: blueviolet;
+    }
+    a:visited {
+        background-color: yellow;
+    }
+    /*before the paragraph you can enter any content like ### or an image
+    p::before {
+        content: url(/Module2/ClassExercises2/th.jpg);
+    } */
+    p::first-line {
+        text-transform: lowercase;
+        color: white;
+    }
+    </style>
+
+    <body>
+<h1> Sample HTML file</h1>
+<p>Simple paragraph written for demonstration of background color<br>More text on the second link</p>
+<section>
+    <div>
+        <form>
+            <label>
+                <label>Username:</label>
+                <input type="text">
+                <button>Click</button>
+            </label>
+        </form>
+    </div>
+    <div>
+        <a href="https://www.institutedata.com/">Visit my site</a>
+    </div>
+</section>
+    </body>
+
+</html>

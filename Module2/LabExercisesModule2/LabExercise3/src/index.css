@@ -1,0 +1,93 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+.background-1 {
+  background: #68b0ab;
+}
+
+.background-2 {
+  background: #8fc0a9;
+}
+
+.background-3 {
+  background: #c8d5b9;
+}
+
+.background-4 {
+  background: #faf3dd;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.h-80 {
+  min-height: 80px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.w-80 {
+  width: 80px;
+}
+/* Flex Container rules, parent */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+/* flex item rules, child - flex items are taking up the entire width of the page in a block, 
+the number increases/decreases the size of the flex items */
+.flex-item-1 {
+  flex: 1;
+}
+.flex-item-2 {
+  flex: 1;
+}
+.flex-item-3 {
+  flex: 1;
+}
+.flex-item-4 {
+  flex: 1;
+}
+/* played with stretch, end, start, beginning, space bteween, around and evenly. 
+Centered flex item on the main and cross axis. */
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-space-between {
+  justify-content: space-between; /* used space between to push items to the left and right of the container */
+}
+.flex-wrap {
+  flex-wrap: wrap-reverse; /* wrap aligned the items from 1 to 4 across two lines, whereas wrap-reverse swapped them 
+  with 1-2 on the bottom row and 3-4 on the top. wrap reverse does not apply if there is sufficient space for the items in the container */
+}
+.flex-basis-item-50 {
+  flex-basis: 25%; /* 50% allowed each item to take 50% of the viewport width. I changed it to 25% so it fits on one row */
+}
+.flex-menu {
+  display: flex;
+  flex-direction: row;
+  padding: 0; /* override padding to shift items to the left */
+}
+li {
+  width: 80px;
+  text-align: center;
+  margin: 1px;
+  padding: 10px;
+  font-size: medium bold;
+  list-style-type: none;
+  flex-grow: 10px;
+}
+.fourth-item {
+  order: 5; /*moved flex order to shift FAQS to the end of the items*/
+}

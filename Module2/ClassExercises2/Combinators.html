@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="/Module2/ClassExercises2/mystyles.css" rel="mystyles">
+</head>
+<style>
+    
+    .section1 {
+        background-color: bisque;
+        color: blueviolet;
+    }
+    .section1 .class1 {
+        color: aquamarine;
+    }
+    a:hover {
+        background-color: blueviolet;
+    }
+    section {
+        background-color: yellow;
+        color: rgb(122, 122, 254) !important;
+    }
+    p::after {
+        content: "---END---";
+    }
+    p::before {
+        content: "-->" ;
+    }
+    #div1 {
+        color: green;
+    }
+    section #div2 {
+        color: gray
+    }
+    p::first-letter {
+        font-size: x-large;
+        color:blue;
+    }
+    p::first-line {
+        color: crimson;
+        text-transform: lowercase;
+    }
+    .underlined {
+        text-decoration: underline;
+    }
+    body {
+        background-image: url(/Module2/ClassExercises2/th.jpg);
+    }
+    
+    @media screen and (min-width: 800px) and (max-width: 1200px){ /* change the font based on the size
+        of the screen. smaller than 500 and larger than 1200 will default, within the min and max will be 45px*/
+        body {
+            font-size: 45px;
+            background-color: gray;
+            background-image: url("/Module2/ClassExercises2/pexels-mccutcheon-1191710.jpg");
+        }
+        .section1 {
+        background-color: greenyellow;
+        color: pink;
+    }
+    }
+</style>
+
+<body>
+    <section class="section1">
+        some content inside the first section.
+        <p>First paragraph detailing software engineering cohort.
+        </p>
+        <p class="paragraph">
+            Second paragraph about the content of the course.
+        </p>
+        <h1 class="class1">Main section of the web page</h1>
+       <div id="div1" style="color: brown;">
+        Information about the main section in detail.
+       </div>
+    <div id="div2">
+            Second section of the main section.
+            <div class="">
+            </div>
+        </div>
+        <div>
+            Third section of the main section.
+        </div>
+        <a href="https://www.google.com" class="class1">Visit my website</a>
+    </section>
+</body>
+
+</html>

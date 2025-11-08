@@ -1,0 +1,144 @@
+body {
+  padding: 10px;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #a3c4bc;
+  display: flex; /*parent to sections*/
+  flex-direction: column;
+}
+header {
+  /*parent element making its children flex items, h1*/
+  margin: 10px;
+  height: 20vw;
+  width: 90vw;
+  border: 5px solid #545e75;
+  border-radius: 15px; /*borger radius*/
+  display: flex; /*flexbox use of centering elements*/
+  align-items: center;
+  justify-content: center;
+  background-image: url(/Module2/LabExercisesModule2/LabExercise4/images/naail-hussain-XGLXYn6XOrQ-unsplash.jpg); /*adding a background image*/
+  background-size: cover;
+}
+h1 {
+  /*heading in header*/
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: 5px;
+}
+main.content {
+  /*this is the container for current and history. use of box-model margin padding height and width*/
+  width: 95%;
+  height: 50%;
+  margin: 10px;
+  background-color: #c89f9c;
+  border: 5px solid #545e75;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+}
+section#current {
+  /*this is a child of main.content*/
+  width: 40%;
+  padding: 10px;
+  font-size: small;
+  font-weight: lighter;
+}
+h2 {
+  /*heading in section#current*/
+  color: rgb(22, 23, 22);
+  letter-spacing: 5px;
+  margin-left: 20px;
+  text-decoration: underline;
+  text-transform: uppercase; /*styling text*/
+}
+p {
+  margin: 5px;
+  padding: 5px;
+  color: #545e75;
+  font-size: large;
+  font-weight: lighter;
+}
+section#history {
+  /*this is the child of main.content*/
+  width: 60%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #a3c4bc;
+  border: #c89f9c solid 4px;
+  border-radius: 5px;
+  font-size: small;
+  font-weight: lighter;
+}
+h3 {
+  text-decoration: underline; /*styling text*/
+}
+footer {
+  /*parent of div*/
+  width: 95vw;
+  background-color: #545e75;
+  border: 2px solid #cbff4d;
+  border-radius: 5px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-between; /*using flecbox to space elements*/
+  align-items: flex-start;
+}
+div#contactdetails {
+  color: #cbff4d;
+  font-size: 1em;
+  margin: 15px;
+  padding: 5px;
+}
+a {
+  /*child of footer?*/
+  color: #cbff4d;
+  font-size: 1em;
+  margin: 15px;
+  padding: 5px;
+}
+a:visited {
+  /*styling links*/
+  color: #a3c4bc;
+}
+a:hover {
+  color: #c89f9c;
+}
+@media screen and (max-width: 600px) { 
+    /*using media queries to adjust for smaller screens, i spent alot of 
+    time with this because everytime i adjusted my screen sizes it looked different. 
+    I may have been giving insufficient time for it to reflect because i did nothing different and it worked!!*/
+  body {
+    background-image: url(/Module2/LabExercisesModule2/LabExercise4/images/naail-hussain-XGLXYn6XOrQ-unsplash.jpg);
+  }
+  h1 { /* the heading was too large for the header */
+    font-size: 2em;
+    margin: 25px;
+  }
+  header {
+    width: 85vw;
+    margin-left: 3px;
+    padding: 6px;
+  }
+  main.content { /*most of the content was too far to the right of the screen */
+    margin: 0;
+    padding: 6px;
+  }
+  h2 {
+    margin-left: 10px;
+  }
+  li {
+    text-align: left;
+  }
+  footer { /*I removed the background color and border so that the background image could show through, it looks better*/
+    width: 92vw;
+    height: 10vh;
+    margin-left: initial;
+    background-color: transparent;
+    border: none;
+  }
+  a { /*the link for Institute of data was wrapping on to a second line so i adjusted the margin and padding. 
+    I attempted to add an image and a link instead of the text but it was too big for the small screen*/
+    margin: 10px;
+    padding: 5px;
+  }
+}

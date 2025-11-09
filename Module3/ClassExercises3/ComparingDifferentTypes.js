@@ -4,3 +4,4 @@ console.log("02" == 2) // true - converts to 2 == 2
 console.log(true == 1) // true - true converts to 1
 console.log(false == 0) // true - false converts to 0
 console.log(null == undefined) // true - both convert to 0
+// === compares types, true === 1 is false because true is a boolean 

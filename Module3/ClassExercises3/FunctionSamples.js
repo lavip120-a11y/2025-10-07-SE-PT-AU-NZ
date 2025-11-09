@@ -6,14 +6,16 @@ console.log('hello world'); // can be one or multiple statements inside the func
 
 helloWorld(); // once the function is defined, we need to call it to make it run/execute
 
-// function checkAge returns a value when called
+// simple function to checkAge returns a value when called
 function checkAge(age) {
 if (age >= 18) {
 return 'adult'; // if the condition is true, return this string and exit
 }
 return 'non-adult'; // if the condition was false, return this string and exit
 }
-//let result ? // calling a function
+//call function and store it in a variable
 
+let result = checkAge(20);
+// print 
 console.log( checkAge(21) ) // adult
 console.log( checkAge(13) ) // non-adult

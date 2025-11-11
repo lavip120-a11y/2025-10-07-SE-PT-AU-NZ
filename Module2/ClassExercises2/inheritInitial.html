@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inherit</title>
+  </head>
+
+  <style>
+    #div1 {
+      background-color: gray;
+      color: brown;
+      font-style: italic;
+      font-weight: bold;
+    }
+   em {
+      color: initial;
+      font-style: initial;
+    }
+    p { color: inherit;}
+    #div2 {
+      border: 1px solid green;
+      color: red;
+    } 
+    p {
+      border: 1px solid green;
+      color: red;
+    }
+  </style>
+  <body>
+    <div id="div1">
+      <p>
+        A paragraph that demostrates the initial <br />
+        and Inherit properties in CSS.
+      </p>
+    </div>
+   <div id="div2">
+      <p>The quick brown fox <em>jumps</em> over the lazy dog.</p>
+      </div>
+    <div>
+      <form>
+        <div>
+          <label>Username:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

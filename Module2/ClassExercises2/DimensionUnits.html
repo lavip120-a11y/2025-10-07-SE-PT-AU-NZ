@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dimension Units</title>
+  </head>
+
+  <style>
+    .section1 {
+        width: 100px;
+        background-color: aquamarine;
+    }
+    .section2 {
+        width: 200pt;
+        background-color: azure;
+    }
+    .section3 {
+        width: 50%;
+        background-color: brown;
+    }
+  </style>
+
+<script>
+  function hide() {
+    document.getElementById("section22").style.display = "none"
+  }
+</script>
+
+  <body>
+    <section class="section1">
+      <p>First paragraph example of dimension Units</p>
+    </section>
+    <section class="section2" id="section22">
+      <p>Second paragraph example of dimension Units</p>
+    </section>
+    <section class="section3">
+      <p>Third paragraph example of dimension Units</p>
+    </section>
+    <section>
+      <button onclick="hide()">Hide</button>
+      <button onclick="document.getElementById('section22').style.display = 'block'">Show</button>
+    </section>
+  </body>
+  </html>

@@ -34,3 +34,7 @@ const object = {
 }
 console.log(object); // { '2': 'value of string property' } since 2 and ‘2’ are same
 
+for(let j in user)
+{
+    console.log(`key ${j} of object value is ${user[j]}`);
+}

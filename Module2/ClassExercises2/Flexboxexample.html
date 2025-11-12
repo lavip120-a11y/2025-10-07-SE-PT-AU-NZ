@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FlexboxExamples</title>
   </head>
   <style>
+    :root {
+      --primary-color: #ffee77;
+      --secondary-color: #77eeff;
+      --border-1: solid 5px var(--secondary-color);
+      --spacing: 5px;
+      --font-style: "tahoma";
+      --font-size: 20px;
+    }
     .container {
-        width: 150px;
-        display: flex;
-        border: 2px solid red;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      width: 50px;
+      border: 2px solid var(--primary-color);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .child {
-      width: 150%;
-      border: 1px solid black;
-      font-size: 20px;
-      background-color: aqua;
-      text-align: center;
-      color: black;
+      width: 150px;
       height: 150px;
+      background-color: var(--primary-color);
+      padding: 10px;
+      text-align: center;
+      color: white;
+      border: 1px solid var(--secondary-color);
+      font-size: var(--font-size);
     }
   </style>
   <body>

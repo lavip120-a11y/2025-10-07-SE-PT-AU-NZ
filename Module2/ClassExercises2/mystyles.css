@@ -4,6 +4,14 @@ li{
 h1, h2{
     background-color: green;
 }
-body{
+body {
     background-color: rgb(224, 217, 218);
+}
+.class1 {
+    color: blue;
+    background-color: pink;
+    font-weight: bold;
+}
+div {
+    background-color: blue;
 }

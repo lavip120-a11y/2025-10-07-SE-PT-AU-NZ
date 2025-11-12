@@ -12,24 +12,24 @@ console.log(user1.hasShortName()); // true
 
 //i can create another user using contructor instead of cloning - this is the ideal way to do it.
 
-let user2 = new User("Mirza", "Arshad");
+let user2 = new User("Mirza", "Arshad"); //user2 and 3 are seperate objects
 let user3 = new User("Will", "Smith");
 
 console.log(user2);
 console.log(user3);
 
 //class is better than constructor
-//class User {
-// constructor(first, last) {
-// this.first = first;
-// this.last = last;
-// }
+class Users {
+constructor(first, last) {
+this.first = first;
+this.last = last;
+}
 
-// hasShortName() {
-// return this.first.length >= 3
-// }
-// }
+hasShortName() {
+return this.first.length >= 3
+}
+}
 
-// let user2 = new User('Tina', 'Smith') // need to use 'new'
-// console.log(user2) // User { first: 'Tina', last: 'Smith' }
-// console.log(user2.hasShortName()) // false
+let users2 = new Users('Tina', 'Smith') // need to use 'new'
+console.log(users2) // User { first: 'Tina', last: 'Smith' }
+console.log(users2.hasShortName()) // false

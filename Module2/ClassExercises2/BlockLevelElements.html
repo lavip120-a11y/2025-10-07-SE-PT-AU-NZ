@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang=""en">
+<html lang="en">
 
 <head>
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block level element</title>
+    <title>Block level elements</title>
 </head>
 
+<style>
+    div {
+      background-color: blue;
+      border: 1px solid black;
+      margin-left: 10px;
+      margin-top: 50px;
+      margin-right: 100px;
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 20px;
+      max-width: 20px;
+    }
+    .box {
+      padding: 20px;
+      border: 2px solid black;
+      margin: 40px;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+    }
+    .content-box {
+      box-sizing: content-box;
+      background: lightblue;
+    }
+    .border-box {
+      box-sizing: border-box;
+      background: lightgreen;
+    }
+</style>
 <body>
     <div style="background-color:aquamarine;">
         <p style="background-color: cadetblue;"></p>First Paragraph</p>
@@ -20,8 +50,9 @@
         <p>This has some text This has some text <br>This has some text </p>
     </div>
     <div>
-        <p>678 Bruce Street<br>95 Gary Drive<br>87 Fiona Avenue</p>
+        <p>678 Bruce Street<br>95 Gary Drive<br>XYZ city<br>87 Fiona Avenue</p>
     </div>
+    
 <section>
     <header>
 

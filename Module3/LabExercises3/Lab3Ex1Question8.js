@@ -19,9 +19,9 @@ for (let key in sydney) {
 
 const auckland = {
 name: 'Auckland',
-population: 1_7_000,
+language: 'English',
 country: 'New Zealand',
-founded: '1840',
+landmark: 'One tree hill',
 timezone: 'Auckland, New Zealand'
 }
 for (let key in auckland) {

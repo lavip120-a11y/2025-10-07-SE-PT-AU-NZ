@@ -9,4 +9,10 @@ else console.log("Number outside the range");
 const point1 = 0.1;
 const point2 = 0.2;
 
-console.log(result.toFixed(2));
+const result = point1 + point2;
+console.log(result.toFixed(2));  //toFixed will work better because imprecise calculations will occur
+//console.log(`${point1} + ${point2} = ${point1 + point2}`) // 0.1 + 0.2 = 0.30000000000000004
+
+// Numeric literals with absolute values equal to 2^53 or greater are too large to be represented accurately as integers.
+console.log(9_999_999_999_999_999) // 16 digits, prints as 10000000000000000
+console.log(Number.MAX_SAFE_INTEGER) // 9_007_199_254_740_991

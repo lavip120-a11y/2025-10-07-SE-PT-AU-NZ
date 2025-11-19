@@ -10,3 +10,5 @@ console.log(copyright);
 
 const smiley = "\u{1f60D}";
 console.log(smiley);
+
+//there is a link to unicode characters - UTF16 characters

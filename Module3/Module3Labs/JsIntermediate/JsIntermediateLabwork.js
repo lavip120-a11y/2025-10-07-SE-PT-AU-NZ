@@ -61,19 +61,6 @@ console.log(findMatchingAnimals("R"));
 // //   return afterDash.toUpperCase(); //replaces the dash and what comes after it with an uppercase letter
 // }
 
-// function camelCase(cssProp) {
-//   return cssProp.split('-').map((word, index) => { //split in two using the dash,
-//     if (index === 0) return word.toLowerCase();
-//     return word.charAt(0).toUpperCase() + word.slice(1); //capatalise the first letter after the dash, slice the rest of the word
-//   }).join(''); } //join back together
-
-// function camelCase(cssProp) {
-//   let index = cssProp.indexOf('-'); //finding the dash index
-//   return cssProp.slice(0, index) + cssProp.charAt(index + 1).toUpperCase() + cssProp.slice(index +2);
-//first slice from 0 to the dash index, charAt find the letter after the dash, to UpperCase changes it to uppercase,
-// slice starts at 2 after the dash and returns the rest of the word, it is all joined together by the concatenation
-// }
-
 // b) Create variants of the camelCase function that use different types of for loops,
 
 // for of loop
@@ -155,12 +142,10 @@ console.log(currencyAddition(0.2, 0.1)); // printing the values to be calculated
 // operation (either +, -, / or *) on the two numbers and returns the correct float result.
 
 function currencyOperation(float1, float2, operation) {
-  f1 = Math.round(float1 * 100);
-  f2 = Math.round(float2 * 100); // multiplying float values by 100 to represent cents - not sure if this is needed.
+  let f1 = Math.round(float1 * 100);
+  let f2 = Math.round(float2 * 100); // multiplying float values by 100 to represent cents - not sure if this is needed.
   let result;
-  switch (
-    operation //applying the switch statement
-  ) {
+  switch (operation) { //applying the switch statement
     case "add":
       result = f1 + f2;
       break;
@@ -249,7 +234,7 @@ console.log(getBookTitle());
 
 // b) Write a function getOldBooks() that uses the filter function to return all book objects written before 1950.
 function getOldBooks() {
-  return (pre1950 = books.filter((book) => book.year < 1950));
+  return books.filter(book => book.year < 1950);
 }
 console.log(getOldBooks());
 // c) Write a function addGenre() that uses the map function to add a new genre property to all of the above books, with the value ‘classic’.

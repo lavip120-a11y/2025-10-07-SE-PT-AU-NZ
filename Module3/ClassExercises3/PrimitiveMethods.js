@@ -15,3 +15,28 @@ else console.log("failure");
 
 hello.startsWith("hello") ? console.log("success") : console.log("failure"); //conditional operators
 
+// //learning different ways to capitilise
+function ucFirstLetters(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+console.log(ucFirstLetters('los angeles')) 
+
+//use of split map charAt toUppercase & slice..join.. geez theres gotta be a simpler way to capitalise each letter
+// function ucFirstLetters(string) {
+//   return string.split(' ').map(word =>
+//     word.charAt(0).toUpperCase() + word.slice(1)
+//   ).join(' ')
+// }
+
+// console.log(ucFirstLetters('los angeles')); 
+
+
+// // regex and replace
+// function capitalizeFirstLetter(string) {
+//   return string.replace(/^./, string[0].toUpperCase())
+// }
+
+// // Example usage
+// const example2 = 'javascript'
+// console.log(capitalizeFirstLetter(example2)) // Output: Javascript

@@ -1,13 +1,16 @@
 let student = { //student object or property of an object or a key
     firstName: "William",
     location: "New Zealand",
-    sing: function() {  //object (sing) can have a function
+    sing: function() {  //object (sing) can have a function or a method
          console.log("I sing"); //definition 
     },
-    sing2(){
-console.log("Sing2 method");
+    sing2(){ //example without using a function keyword
+        console.log("Sing2 method"); //define the method here
     },
-    printStudentDetails() {
+    //console.log(student.sing()); // print
+    //console.log(student.sing2());
+
+    printStudentDetails() { //this is referring to the same object above - it is within the object.
         console.log(`Hello, My name is ${this.firstName} and I live in ${this.location}`);
     },
 };

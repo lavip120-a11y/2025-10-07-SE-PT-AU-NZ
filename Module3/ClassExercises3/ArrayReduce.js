@@ -10,7 +10,7 @@ const totalQty = products.reduce((currentQty, currentProduct) => currentQty + cu
 console.log(totalPrice) // 128.85000000000002
 console.log(totalQty) // 10
 
-// combining previous array functions to simplify  (chaining)
+// combining previous array functions to simplify (chaining)
 const products1 = [
 { id: 1, title: 'Sleeveless Tee', price: 23.95, category: 'Shirts', quantity: 2 },
 { id: 2, title: "Men's Hoodie", price: 54.95, category: 'Winter', quantity: 3 },

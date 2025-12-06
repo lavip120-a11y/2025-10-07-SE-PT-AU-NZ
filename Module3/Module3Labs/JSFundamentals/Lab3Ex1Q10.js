@@ -12,7 +12,7 @@ let Person1 = new Person("John", 35); //create new person using the constructor 
 
 // b) Create a second person using different name and age values and store it in a separate variable
 
-let Person2 = new Person("James", 53);
+let Person2 = new Person("James", 53); //seperate variable with second person
 
 // c) Print out the properties of each person object to the console
 console.log(Person1);

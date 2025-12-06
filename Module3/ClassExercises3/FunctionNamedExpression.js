@@ -4,14 +4,14 @@ HelloFunction("Mirza", "Auckland", "New Zealand");
 
 
 const sample = function () {  //define a function
-    console.log("Sample function");
+    console.log("Sample function"); //print
 };
 
 sample(); 
 //to call the function above use the name of the variable 
 // - it becomes the name of the function because there is no named parameter() 
 
-const sayHello = function (name) { //when i call this function it has a parameter so i use that when i call it
+const sayHello = function (name) { //when i call this function it has a parameter so i must use a parameter when i call it
     console.log("Hello" + name);
     console.log(arguments[0]);
 };

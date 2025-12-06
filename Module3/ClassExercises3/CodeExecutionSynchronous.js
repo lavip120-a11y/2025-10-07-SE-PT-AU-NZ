@@ -22,7 +22,7 @@ for (let i= 0; i < 10; i++)
 if (i == 5) {
     clearInterval(timerID);
     console.log("Processing stopped..");
-    break; //breaks the loop
+    break; //breaks the loop - exit a loop
 }
 }
 

@@ -19,3 +19,5 @@ console.log(sentence.split(' ')) // splits into multiple strings using the given
 console.log(sentence.slice(4, 10)) // quick - gets the section between chars 4 and 10
 console.log(sentence.replace('quick', 'slow')) // The slow brown fox jumps over the lazy dog.
 console.log(" extra spaces ".trim()) // extra spaces - trims whitespace from start and end not the middle
+
+

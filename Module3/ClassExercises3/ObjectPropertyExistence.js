@@ -21,4 +21,4 @@ phone.storage
   ? console.log(`My ${phone.model} is ${phone.storage}`)
   : console.log("phone doesnt have storage property");
 //anything that is written before a ? is an expression and an expression always returns an expression
-//if phone.color exists
+//if phone.color exists. 

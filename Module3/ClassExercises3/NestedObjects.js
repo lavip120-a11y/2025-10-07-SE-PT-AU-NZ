@@ -6,7 +6,7 @@ let sales = { //another object
 let person = { //object
     name : "Bruce", //values
     location: "New Zealand",
-    address: {  //this is a string stored like seperate objects (nested), this makes it easier to access
+    address: {  //key called address which is another object. This is a string stored like seperate objects (nested), this makes it easier to access
         //nested item copies by reference not by value.  individual items copy by value.
         street: "21 Elliot",
         city: "Auckland", 

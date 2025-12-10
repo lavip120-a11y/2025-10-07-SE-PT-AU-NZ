@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modify Add Card</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e3f2fd;
+      }
+      .card {
+        padding: 10px;
+      }
+      .card-title {
+        font-weight: 600;
+        font-size: 3em;
+        font-family: "Playwrite NO", cursive;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        padding: 0 0 10px 0;
+      }
+      .card-description {
+        font-weight: 400;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <template id="card-template">
+      <!--template to replicate a single card-->
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"></div>
+          <div class="card-text"></div>
+        </div>
+      </div>
+    </template>
+    <div id="card-list"></div>
+    <!--must append this or it wont show on the screen-->
+
+    <script>
+      const data = [
+        { name: "bob", age: 23 },
+        { name: "alice", age: 39 },
+      ]; //Exercise 2 - Call addCard repeatedly so that your cards are automatically generated based on data from an array.
+
+      function addCard(name, age) {
+        // exercise 1 - modified to pass content dynamically
+        // clone the template
+        const template = document
+          .getElementById("card-template")
+          .content.cloneNode(true); //accessing the template id
+        // structure of template is stored in template variable. creates a clone of the code of the template structure above
+
+        // populate the template
+        template.querySelector(".card-title").innerText = name; //selector checks to see if there is any template using the class (.card-title) and accesses that div.
+        template.querySelector(".card-text").innerText = age; // inner text - text between open and closed tag of the div
+
+        document // include the populated template into the page
+          .querySelector("#card-list") //# is a ? selector
+          .appendChild(template); //appends to a copy of the child - the addCard()
+      }
+
+      data.forEach((detail) => {
+        addCard(detail.name, detail.age); //add foreach method ....
+      });
+
+      // addCard(data.name, data.age); // exercise 1 - modified to pass content dynamically //call the card, function cannot call itself
+      // addCard(data.name, data.age); //repeats on the same page
+    </script>
+  </body>
+</html>

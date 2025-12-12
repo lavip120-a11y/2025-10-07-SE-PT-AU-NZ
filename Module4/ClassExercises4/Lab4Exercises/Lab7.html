@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+</head>
+<body>
+    <style>
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: plum;
+    animation-name: slidedown; /*give name of the keyframe*/
+    animation-delay: 3s; /*delay for 5 seconds before running*/
+    animation-direction: normal;
+    animation-duration: 10s; /*for 10 secs*/
+    animation-iteration-count: 5; /* play 5 times */
+    animation-timing-function: linear; /*speed*/
+    position:relative;
+}
+    @keyframes slidedown{ /*slide from top to bottom*/
+    from {
+        margin-top: 0%;
+        background-color: palegoldenrod;
+    }
+        to {
+        margin-top: 100%;
+        background-color: purple;
+    }
+}
+
+    </style>
+   
+   <div class="square"></div>
+   
+</body>
+</html>

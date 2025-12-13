@@ -1,0 +1,94 @@
+<!--use set interval to read the array every 5 seconds
+how to re populate - form that when submitted it will add an item to the array. 2 input elements, title and content...
+prevent refreshing the page by preventDefault behaviour. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>News</title>
+    <style>
+      
+      div {
+        margin: 10px;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+<template id="news-template">
+<div class="card col-8" style="width: 18rem; margin:10px">
+<div class="card-body">
+<h5 class="card-title">News</h5>
+<p class="card-text">News context.</p>
+</div>
+</div>
+</template>
+
+<div id="news-list" class="row"></div> 
+<!-- added a form to the news page-->
+ <form id="submitNews">
+    <div>
+    <label>News Title</label>
+    <input type="text" id="news-title">
+    <!--<button onclick="document.getElementById('news-title').value = ''">Clear title</button> how to clear fields --> 
+    </div>
+    <div>
+    <label>News Content</label>
+    <input type="text" id="news-content">
+    <!--<button onclick="document.getElementById('news-content').value = ''">Clear content</button> -->
+    
+    </div>
+    <div>
+    <input type="submit" value="Add News">
+    </div>
+    <div>
+    <button onclick="document.getElementById('news-title').value = '';
+  document.getElementById('news-content').value = '';">Clear content</button>
+  </div>
+</form> 
+  </body>
+
+<script>
+    let news = [  //my array of objects
+{ id: 1, title: 'Election Results',content: "Newly elected minister..." },
+{ id: 2, title: 'Sporting Success',content: "World Cup winners..." },
+{ id: 3, title: 'Tornado Warning',content: "Residents should prepare..." }
+];
+
+// clone, then populate, then append a new template
+function addNews(newNews) {
+
+const template = document.getElementById("news-template").content.cloneNode(true); //find the news-template and copies it.
+template.querySelector('.card-title').innerText = newNews.title;  //finding card-title and card-content from clone and its text becomes the newNews object.
+template.querySelector('.card-text').innerText = newNews.content;
+document.querySelector('#news-list').appendChild(template); //find the div news-list and the card appears on the page
+}
+
+function readArray() { //new function to add new info?
+const newsList = document.querySelector('#news-list'); //finds the place for new info?
+newsList.innerHTML = ""; //clears original info
+news.forEach(newEntry => addNews(newEntry)); //loops through the array, calls addNews() and adds to page?
+}
+
+readArray(); //show original info
+
+setInterval(readArray, 5000); // updates with new news every 5 secs - use setinterval to read the array every 5 seconds
+
+document.getElementById("submitNews").addEventListener("submit", function (event) { event.preventDefault();
+ //prevents submission of form on submit. finds the id submitNews, when this form is submitted run this function
+
+let title = document.getElementById("news-title").value; 
+let content = document.getElementById("news-content").value;
+
+news.push({ title, content}); //pushing new data to the array
+news.shift({ title, content}); //removing the first object from the array 
+readArray();
+});
+
+</script>
+</html>

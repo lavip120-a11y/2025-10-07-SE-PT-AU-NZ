@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxon Dates</title>
+  </head>
+
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
+  <!--Import the Luxon Library - reference Luxon library -->
+
+  <body>
+    <h2>Difference in Days Between Birthdate and Now</h2>
+    <!-- container for Luxon output -->
+    <div id="displayLuxon"></div>
+    <h2>Difference in Years, Months and Days</h2>
+    <div id="diffYMD"></div>
+    <h2>Date closest to the current date</h2>
+    <div id="closestDate"></div>
+    <h2>Which date is first</h2>
+    <div id="beforeAfter"></div>
+     <h2>London</h2>
+    <div id="dateLondon"></div>
+   </body>
+
+   <script>
+
+        const DateTime = luxon.DateTime; //Create a shortcut and new Luxon date. Do you have to do this every time you import the date/time from luxon?
+        let nowluxon = DateTime.now();
+        document.getElementById("displayLuxon").innerText = nowluxon.toFormat("MMMM dd, yyyy");
+
+        //Calculate number of days between birthdate ....
+        let end = DateTime.fromISO("2002-05-21"); 
+        let start = DateTime.fromISO("2025-12-12");
+        let justDays = (start.diff(end, ["days"]).toObject()).days; 
+        document.getElementById("displayLuxon").innerText = `${justDays} Days between now and the birthdate`;
+        //Display years, months and days...
+        let end1 = DateTime.fromISO("2008-03-08"); 
+        let start1 = DateTime.fromISO("2025-12-11");
+//get the years, months and days difference
+        diffYears = (start1.diff(end1, ["years", "months", "days"]).toObject()).years;
+        diffMonths = (start1.diff(end1, ["years", "months", "days"]).toObject()).months;
+        diffDays =  (start1.diff(end1, ["years", "months", "days"]).toObject()).days;
+ //format a string to give the answer
+        document.getElementById("diffYMD").innerText = `${diffYears} Years, ${diffMonths} Months and ${diffDays} Days between now and your birthday`; 
+         
+       
+
+  // use 2 dates and display the date closest to the current date... get number of days and then compare <
+        let firstDate = DateTime.fromISO("2002-05-21"); //assigning luxon date to firstDate variable
+        let secondDate = DateTime.fromISO("2008-03-08");
+//compare it to date now
+let firstComp = nowluxon.diff(firstDate, "days").days;
+let secondComp = nowluxon.diff(secondDate, "days").days; //.toISODate (how do i attach this to make the date return without the time?)
+
+let outCome;
+if (firstComp < secondComp) {
+  outCome = firstDate;
+ } else {
+  outCome = secondDate;
+ }
+
+document.getElementById("closestDate").innerText = `The date closest to the current date is ${outCome.toISODate()}`; //how to only print the date
+
+
+                
+//use 2 dates, display whether the first date is before or after the second date
+        let date1 = DateTime.fromISO("2002-05-21");
+        let date2 = DateTime.fromISO("2008-03-08");
+let comesBefore;
+if (date1 < date2) {
+  comesBefore = "The first date comes before the second date";
+ } else if (date2 < date1)
+ {
+  comesBefore = "The first date comes after the second date ";
+ } else {
+  comesBefore = "Both dates are the same";
+ }
+
+document.getElementById("beforeAfter").innerText = comesBefore;//printing false, so i have to do an if else
+ // if false print date2 comes after date 1??
+
+
+        //display the current time in London
+        let londonTime = nowluxon.setZone("Europe/London")
+          .toLocaleString(DateTime.DATETIME_FULL);
+       document.getElementById("dateLondon").innerText += `The current time in London is ${londonTime}`;
+    
+    </script>
+  </body>
+</html>

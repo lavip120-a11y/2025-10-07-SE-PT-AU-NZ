@@ -4,35 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eCharts</title>
+<title>eCharts</title> 
+
+<!--importing my e-chart -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
   </head>
 
   <body>
-    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <!-- Prepare a DOM with a defined width and height for ECharts - div to place echart-->
     <div id="main" style="width: 900px; height: 600px"></div>
-    <!--div to place echart-->
-  
+    
     <script type="text/javascript">
       // Initialize the echarts instance - creates a reference, pass a reference to the div element, returns reference to mychart
       // echarts initialised - echarts.init
       let myChart = echarts.init(document.getElementById("main"));
 
-      fetch("https://fakestoreapi.com/products") //fetching data from fakestoreapi
-        .then((response) => response.json()) // converting to javascript data
-        .then((json) => {
-          // use this JSON to find and set correct option data for the chart
+      fetch("https://fakestoreapi.com/products") //fetching data from fakestoreapi (initiates an HTTP request and returns a promise.)
+        .then((response) => response.json()) // converting to javascript data (receives the response object)
+        .then((json) => {  // process the response using json
 
-          let jsonProducts = new Map(); // making a new map using json products
+          let jsonProducts = new Map(); // making a new map using jsonProducts
 
-          json.forEach((item) => {
-            jsonProducts.set(
-              item.category,
-              jsonProducts.get(item.category) + 1 || 0
-            ); //getting jsonproduct category and adding 1 count to it OR count a zero
+          json.forEach((item) => { //iterating over each item and creating a set of unique values from the category
+         let category = item.category;
+         
+          jsonProducts.set(category, (jsonProducts.get(category) || 0 )  + 1);   //getting jsonproduct category and adding 1 count for each catgory OR count a zero
           });
-
-          let categories = Array.from(jsonProducts.keys());
+          
+          let categories = Array.from(jsonProducts.keys()); //category and count key value pair
           let counts = Array.from(jsonProducts.values());
 
           // Display the chart
@@ -40,14 +39,14 @@
             // Specify the configuration items and data for the chart
             title: { text: "Fake Store Categories" },
             xAxis: {
-              data: categories,
+              data: categories, //making it dynamic by removing the static data
             },
             yAxis: {},
             series: [
               {
                 name: "# products",
                 type: "bar",
-                data: counts,
+                data: counts, //making it dynamic by removing the static data
               },
             ],
           });

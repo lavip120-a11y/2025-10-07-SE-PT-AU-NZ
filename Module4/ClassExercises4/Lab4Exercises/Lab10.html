@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Cards Bootstrap</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+
+  <body>
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <!--navbar button-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--dropdown button-->
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </button>
+              <!--dropdown menu list-->
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                id="categoryDropdown"
+              >
+                <!-- <li><a class="dropdown-item" href="#"></a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--card template-->
+    <template id="card-template">
+      <div class="row">
+        <div
+          class="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center mb-4 p-3 mb-2"
+        >
+          <div class="card">
+            <div class="card border-success">
+              <img
+                src=""
+                class="card-img-top"
+                alt="..."
+                style="width: 300px; height: 200px"
+              />
+              <div class="card-body">
+                <h4 class="card-title"></h4>
+                <!--title-->
+                <p class="card-text"></p>
+                <!--description-->
+                <p class="card-price">$</p>
+                <!--product price-->
+                <a href="#" class="btn btn-primary">Purchase</a>
+                <!--purchase button-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <div id="card-list" class="row"></div>
+    <!--must append this or it wont show on the screen-->
+  </body>
+
+  <script>
+    fetch("https://fakestoreapi.com/products") //fetch function, getting info from browser
+      .then((response) => response.json()) //first then gets JSON from response and any data returned becomes promise
+      .then((json) => {
+        // 2nd then gets JSON data and converts to javascript
+
+        json.forEach((item) => {
+          //iterating over each object in the array
+
+          const card = document
+            .getElementById("card-template")
+            .content.cloneNode(true); //reference my card template and clone it
+          card.querySelector(".card-title").innerText = item.title; //populating my card with json data, title, image, description and the price
+          card.querySelector(".card-img-top").src = item.image;
+          card.querySelector(".card-text").innerText = item.description;
+          card.querySelector(".card-price").innerText = "$" + item.price; // i want to make it currency $$NZ dollars
+          document.querySelector("#card-list").appendChild(card); //appending to the page
+        });
+        // need drop down selector to choose product 
+        const dropDown = document.getElementById("categoryDropdown"); //reference my dropdown list?
+        //console.log(dropDown);
+        const categories = [...new Set(json.map((item) => item.category))]; //new set to remove duplicates 
+        //console.log(categories);
+        categories.forEach((category) => {
+          const li = document.createElement("li"); //createElement - using to create a list element
+          li.innerHTML = `<a class="dropdown-item" href="#">${category}</a>`; // creating a dropdown list with the category
+          dropDown.appendChild(li);
+        });
+      });
+  </script>
+</html>

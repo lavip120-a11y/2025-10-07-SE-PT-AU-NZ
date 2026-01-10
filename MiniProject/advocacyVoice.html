@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advocacy and Community Voice</title>
+    
+    <!-- importing bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+
+      <!--importing my e-chart -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  
+    <!-- link to stylesheet for CSS. I will combine all CSS into this file for uniformity -->
+    <link rel="stylesheet" href="styleSheet.css" />
+  </head>
+
+  <body>
+    <!-- template for cards used for chat -->
+    <template id="chat-template">
+      <div class="card col-8" style="width: 18rem; margin: 20px">
+        <div class="card-body">
+          <h5 class="card-title">Help With</h5>
+          <p class="card-text">Help context.</p>
+        </div>
+      </div>
+    </template>
+
+    <div id="chat-list" class="row"></div>
+    <!-- added a form to the chat page to capture the need and context-->
+    <form id="submitRequest">
+      <div>
+        <label>Need</label>
+        <input type="text" id="chat-title" />
+      </div>
+      <div>
+        <label>Need Context</label>
+        <input type="text" id="chat-content" />
+      </div>
+      <div>
+        <input type="submit" value="Add Need" />
+      </div>
+      <div>
+        <!-- selecting the element id chat-title.  
+         Value has an empty string to allow the value to be filled with the chat-title or need that is entered by the user -->
+        <button
+          onclick="document.getElementById('chat-title').value = ''; 
+          document.getElementById('chat-content').value = '';">
+          Clear content
+        </button>
+      </div>
+    </form>
+
+    <script>
+      //array of objects for my chat page
+      let chat = [
+        {
+          id: 1,
+          need: "Help me with a bank account",
+          context: "I do not have identification",
+        },
+        {
+          id: 2,
+          need: "Help me with Work and Income",
+          context:
+            "they want a doctors certificate by next week but i cant get an appointment ",
+        },
+        {
+          id: 3,
+          need: "Id like to study next year",
+          context: "I dont know what my options are",
+        },
+        {
+          id: 4,
+          need: "I need help to apply for carer support",
+          context: "I dont know how to complete the form",
+        },
+      ];
+
+      // clone, then populate, then append a new template
+      function addChat(newChat) {
+        const template = document
+          .getElementById("chat-template")
+          .content.cloneNode(true); //find the chat-template and copies it.
+        template.querySelector(".card-title").innerText = newChat.need; //finding card-title and card-content from clone and its text becomes the new chat object.
+        template.querySelector(".card-text").innerText = newChat.context;
+        document.querySelector("#chat-list").appendChild(template); //find the div chat-list and the card appears on the page
+      }
+//new function to add new info
+      function readArray() {
+        const chatList = document.querySelector("#chat-list"); //finds the place for new info
+        chatList.innerHTML = ""; //clears original info
+        chat.forEach((newEntry) => addChat(newEntry)); //loops through the array, calls addChat() and adds to page.
+      }
+
+      readArray(); //show original info
+      setInterval(readArray, 5000); // updates with new news every 5 secs - use setinterval to read the array every 5 seconds
+
+      document
+        .getElementById("submitRequest")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+//prevents submission of form on submit. finds the id submitRequest, when this form is submitted run this function
+
+          let need = document.getElementById("chat-title").value;
+          let context = document.getElementById("chat-content").value;
+// using this format to act similarily to face book - adding more to the page.  
+// In the future i will figure out how to archive previous requests and utilise those in the chart as well as the FAQ's.
+          chat.push({ need, context }); //pushing new data to the array
+          chat.shift({ need, context }); //removing the first object from the array
+          readArray();
+        });
+    </script>
+
+    <!-- Prepare a DOM with a defined width and height for ECharts - div to place echart-->
+    <div id="main" style="width: 900px; height: 400px"></div>
+    
+    <script type="text/javascript">
+      // Initialize the echarts instance - creates a reference, pass a reference to the div element, returns reference to mychart
+      // echarts initialised - echarts.init
+      let myChart = echarts.init(document.getElementById("main"));
+
+//This is a placeholder and for future use, i will utilise data captured from users accessing and contributing to the chat forum and their usage
+      fetch("https://fakestoreapi.com/products") //fetching data and returning a promise.
+        .then((response) => response.json()) // converting to javascript data (receives the response object)
+        .then((json) => {  // process the response using json
+
+          let jsonProducts = new Map(); // making a new map using jsonProducts
+
+          json.forEach((item) => { //iterating over each item and creating a set of unique values from the category
+         let category = item.category;
+         
+          jsonProducts.set(category, (jsonProducts.get(category) || 0 )  + 1);   //getting jsonproduct category and adding 1 count for each catgory OR count a zero
+          });
+          
+          let categories = Array.from(jsonProducts.keys()); //category and count key value pair
+          let counts = Array.from(jsonProducts.values());
+
+          // Display the chart
+          myChart.setOption({
+            // Specify the configuration items and data for the chart
+            title: { text: "Needs Based on User Information" },
+            xAxis: {
+              data: categories, //making it dynamic by removing the static data
+            },
+            yAxis: {},
+            series: [
+              {
+                name: "# products",
+                type: "bar",
+                data: counts, //making it dynamic by removing the static data
+              },
+            ],
+          });
+        });
+    </script>
+
+<a href="/MiniProject/miniProject1.html">Return Home</a>
+
+  </body>
+</html>

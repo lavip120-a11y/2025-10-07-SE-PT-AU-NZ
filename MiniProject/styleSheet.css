@@ -1,0 +1,74 @@
+/* style sheet file which I started to collate but ran out of time.  i was focusing on function and layout before beauty */
+body {
+background-color: rgb(170, 205, 243);
+}
+
+h1 {
+display: flex;
+justify-content: center; /* Centers horizontally */
+width: 100vh; /* Full viewport width */
+}
+
+nav {
+background-color: #909495;
+}
+
+.nav-link:hover {
+background-color: #82bdcc; /* Change background on hover */
+}
+.dropdown-item:hover {
+background-color: #82bdcc; /* Change background on hover */
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.accordion-header:hover {
+    background-color: #82bdcc; /* Change background on hover */
+    /*color: #fff; /* Change text color on hover */
+}
+
+/* Active state */
+.accordion-header.active {
+    background-color: #1d83f0;
+    color: #fff;
+}
+
+.accordion-body {
+    background-color: #a8c5a2;
+}
+ div {
+        margin: 10px;
+      }
+      .button {
+        padding: 15px 25px;
+        margin: 20px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: cornflowerblue;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }

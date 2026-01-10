@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Mini Project</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+     rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="styleSheet.css">
+  </head>
+  <body>
+    <h1>What's out there?</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">What's out there?</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            About Us</a>
+            <!-- added data-bs-toggle and target to open the modal and connect to the modal id -->
+        </li>
+        <li class="nav-item" id="contactdetails">
+          <a class="nav-link active" href="mailto:someone@example.com">Make Contact</a>
+          <!-- added an e-mail link -->
+       </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Information
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">How Do I...</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Frequently Asked Questions</a></li>
+          </ul>
+        </li>
+      </ul>
+<!-- adding some search functionality to the bootstrap code -->
+      <form class="d-flex position-relative" role="search">
+        <input class="form-control me-2" type="search" id="searchbar" placeholder="Search keywords" aria-label="Search"/>
+        <button class="btn btn-secondary mt-2" type="submit">Search</button>
+       
+        <ul id='keyword' class="list-group" style="display: none;">
+            <li class="list-group-item searchWord">Men</li>
+            <li class="list-group-item searchWord">Carer Support</li>
+            <li class="list-group-item searchWord">Solar Panels</li>
+            <li class="list-group-item searchWord">Gardening</li>
+            <li class="list-group-item searchWord">Animal Care</li>
+            <li class="list-group-item searchWord">Food</li>
+            <li class="list-group-item searchWord">Insurance</li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+
+  <body>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Community connection and cultural opportunities
+      </button>
+    </h2>
+
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Looking for connection with other like minded people, education and cultural groups. 
+          Click this <a href="/MiniProject/communityConnection.html" target="_blank">link</a></div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       Employment, economy and business opportunities
+      </button>
+    </h2>
+
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Access to Employment and Business Support, CV building, Financial Support.</div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Housing & access
+      </button>
+    </h2>
+
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Links to Housing support, Boarding Houses, Emergency Housing and Rental Services. </div>
+    </div>
+  </div>
+
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+        Mental Health and emotional wellbeing support
+      </button>
+    </h2>
+
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Links to counselling services and mental health support.</div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+        Local, trusted information and sharing.
+      </button>
+    </h2>
+
+    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Access to information from other locals about how to access products and services in our community based on their lived experience.</div>
+    </div>
+  </div>
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+        Environment and climate resilience
+      </button>
+    </h2>
+
+    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Access to clear communication during emergencies, join local groups in the quest to reduce our impact on local environment and weather patterns. 
+        Opportunities to access information and build resilience to the impact of environment and climate changes.
+      Click this <a href="/MiniProject/environment.html" target="_blank">link</a></div>
+    </div>
+  </div>
+    
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+        Advocacy and a collective community voice
+      </button>
+    </h2>
+
+    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">If you need advocacy and/or would like to contribute to a collective community voice. 
+        Follow this <a href="/MiniProject/advocacyVoice.html" target="_blank">link</a> to talk with a representative.</div>
+    </div>
+  </div>
+ 
+<!-- link to the script.js file for search bar -->
+  <script src="/MiniProject/script.js"></script>
+
+<!-- Using modal from bootstrap. Removed Button to trigger modal because i already have a button on the navbar -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">About Us</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <p>This site is pulled together voluntarily.  
+        It is a place where anyone can find, seek or access what ever it is you like.
+          The information links provided are for your information only.
+          All other feedback and shared information is based on the lived experience of others who have sought the same thing and shared their experience.
+          If the thing that you are looking for is not already available, make contact by sending an e-mail OR 
+          sharing your needs in the advocacy and collective voice section.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+    <footer>Copyright &copy; 2026</footer>
+   </body>
+</html>

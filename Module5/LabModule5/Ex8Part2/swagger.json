@@ -1,0 +1,22 @@
+{
+"swagger": "2.0",
+"info": {
+"version": "1.0.0",
+"title": "Exercise 8 Part 2 API",
+"description": "My Exercise 8 Part 2",
+"license": {
+"name": "MIT",
+"url": "https://opensource.org/licenses/MIT"
+}
+},
+"host": "localhost:3008",
+"basePath": "/",
+"tags": [
+{
+"name": "ex8Part2",
+"description": "Exercise 8 Part 2"
+}],
+"schemes": ["http"],
+"consumes": ["application/json"],
+"produces": ["application/json"]
+}

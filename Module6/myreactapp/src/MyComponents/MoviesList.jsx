@@ -30,13 +30,13 @@ const [currentMovies, setCurrentMovies] = useState(movies);
 
 function HandleReverseList()
 {
-    let newMovies = [...currentMovies]
-    newMovies.reverse()
-    setCurrentMovies(newMovies)
+    let newMovies = [...currentMovies];
+    newMovies.reverse();
+    setCurrentMovies(newMovies);
 }
 
 //used in AddMovieForm (child)
-function handleAddMovie({title, year, synopsis = "Default Synopsis",}) 
+function handleAddMovie({ title, year, synopsis = "Default Synopsis" }) 
 {
 let updatedMovies = [...currentMovies];
 updatedMovies.push({

@@ -11,7 +11,8 @@ createRoot(document.getElementById('root')).render( //injecting in the root elem
     <App />
     </ErrorBoundary>
   </StrictMode>,
-)
+);
+
 // uses the root element in the index.html file to render the App component
 // App component is the main component which has all the other components inside it
 // StrictMode is a wrapper component that helps to identify potential problems in an application

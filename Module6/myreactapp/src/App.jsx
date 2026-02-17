@@ -24,6 +24,16 @@ import LoginForm from './LoginForm.jsx';
 import SampleUncontrolledForm from './MyComponents/SampleUnctrolledForm.jsx';
 import ExplodingBomb from './MyComponents/ExplodingBomb.jsx';
 import Calculator from './MyComponents/Calculator.jsx';
+import ClockDisplay from './MyComponents/ClockDisplay.jsx';
+import ActivityFinder from './MyComponents/ActivityFinder.jsx';
+import VideoPlayer from './MyComponents/VideoPlayer.jsx';
+import ReducerCounter from './MyComponents/ReducerCounter.jsx';
+import PostListReducer from './MyComponents/PostListReducer.jsx';
+import BitcoinRates from './MyComponents/BitcoinRates.jsx';
+import SubscribeForm from './MyComponents/SubscribeForm.jsx';
+import { UserProvider } from './MyComponents/UserProvider.jsx';
+import MyThemeProvider from './MyComponents/MyThemeProvider.jsx';
+import { MoodProvider } from './MyComponents/MoodProvider.jsx';
 
 // the function name should be capitalized for react to recognize it as a component and is javascript standard
 function App() {
@@ -44,15 +54,35 @@ const studentLocation = (
 
   return (
   <>
-  <h1>Module 6 Exercises</h1>
+  <h1>Module 7</h1>
+  
+<MoodProvider> {/*Provides the context to the children components  */}
+  <BitcoinRates></BitcoinRates>
+     <Emoji></Emoji>
+</MoodProvider>
+
+{/* <UserProvider> {/* Providing the Context - all components within UserProvider are children and will recieve context*/}
+ {/* <MyThemeProvider>
+  {" "}
+  <SubscribeForm></SubscribeForm>
+  <LoginForm></LoginForm>
+  <ActivityFinder></ActivityFinder>
+  </MyThemeProvider>
+</UserProvider> */}
+  {/* <PostListReducer></PostListReducer>
+  <ReducerCounter></ReducerCounter>
+  <VideoPlayer></VideoPlayer>
+  <ClockDisplay></ClockDisplay> */} 
+  
+  {/* <h1>Module 6 Exercises</h1>
   <Calculator></Calculator> 
-  <BigCats></BigCats> 
+  <BigCats></BigCats>  */}
  {/* <SampleUncontrolledForm></SampleUncontrolledForm>
    <ExplodingBomb></ExplodingBomb>  
-  <LoginForm></LoginForm>
+  
   <Weather></Weather>
   <BirthdayTranslator></BirthdayTranslator>*/}
-  <Emoji></Emoji>
+ 
  {/* <MoodChanger></MoodChanger>
    <Counter></Counter> 
   <MoviesList></MoviesList>*/}
@@ -79,9 +109,9 @@ date={comment.date}>
 <FullName firstName="Peter" lastName="Smith"></FullName>*/}
 {/* using the Greeting component and passing a prop called name with value Mary */}
 
-<Greeting name="Mary"> 
+{/* <Greeting name="Mary"> 
 <p>Welcome to our class</p> 
-</Greeting> 
+</Greeting>  */}
   {/* child element passed to the Greeting component */}
     
 {/*<Pet type='cat' color='black' name='Fluffy'></Pet>

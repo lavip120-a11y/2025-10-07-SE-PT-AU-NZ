@@ -10,8 +10,8 @@ const [tempCelcius, setTempCelcius] = useState(27)
 
 // handler function to update both state values at once
 const handleWeatherChange = (newWeather, newTemp) => {
-setWeather(newWeather)
-setTempCelcius(newTemp)
+setWeather(newWeather);
+setTempCelcius(newTemp);
 }
 // jsx to render weather info and child components
 return (
@@ -26,6 +26,7 @@ return (
 checkweather indirectly calls the js function defined in the parent using the prop */}
 <CheckWeather onWeatherChange={handleWeatherChange} /> 
 </div>
-)
+);
 }
+
 export default Weather;

@@ -71,10 +71,12 @@ function ResponsiveAppBar() {
               color: "primary.contrastText",
               textDecoration: "none",
               "&:hover": {
-                color: "primary.dark"
-              }
+                color: "primary.dark",
+              },
             }}
-          > EQUALITY
+          >
+            {" "}
+            EQUALITY
           </Typography>
 
           {/* xs for mobile ph and md for desktop, shows if it is a mobile */}
@@ -113,7 +115,10 @@ function ResponsiveAppBar() {
                     handleCloseNavMenu();
                     navigate(page.path);
                   }}
-                  sx={{ bgcolor: "secondary.main", color: "secondary.contrastText" }}
+                  sx={{
+                    bgcolor: "secondary.main",
+                    color: "secondary.contrastText",
+                  }}
                 >
                   <Typography sx={{ textAlign: "center" }}>
                     {page.name}
@@ -145,8 +150,8 @@ function ResponsiveAppBar() {
               color: "primary.contrastText",
               textDecoration: "none",
               "&:hover": {
-                color: "primary.dark"
-              }
+                color: "primary.dark",
+              },
             }}
           >
             Equality

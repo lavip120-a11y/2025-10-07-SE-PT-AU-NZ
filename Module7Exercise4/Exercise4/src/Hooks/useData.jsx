@@ -7,7 +7,7 @@ export function useData(url) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    console.log(url)
+    console.log(url);
     if (url) {
       let ignore = false;
       fetch(url)

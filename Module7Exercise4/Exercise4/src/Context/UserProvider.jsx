@@ -1,18 +1,18 @@
 import { createContext } from "react";
 import { useState } from "react";
 
-export const UserContext = createContext(); 
+export const UserContext = createContext();
 
 export function UserProvider(props) {
-const [currentUser, setCurrentuser] = useState({});
+  const [currentUser, setCurrentuser] = useState({});
 
-function handleUpdateUser(user) {
+  function handleUpdateUser(user) {
     setCurrentuser(user);
-}
+  }
 
-return (
+  return (
     <UserContext.Provider value={{ currentUser, handleUpdateUser }}>
-        {props.children}
+      {props.children}
     </UserContext.Provider>
-);
+  );
 }

@@ -53,13 +53,13 @@ function LoginForm() {
             e.preventDefault();
             FormSubmitted();
           }}
-          sx={{ 
+          sx={{
             minWidth: 120,
-          backgroundColor: 'primary.light', 
-        color: 'primary.contrastText', 
-      p: 3,
-    borderRadius: 2
-   }}
+            backgroundColor: "primary.light",
+            color: "primary.contrastText",
+            p: 3,
+            borderRadius: 2,
+          }}
         >
           <FormControl>
             <TextField
@@ -78,35 +78,35 @@ function LoginForm() {
               margin="normal"
               {...passInputProps}
             ></TextField>
-<FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Age</InputLabel>
               <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={age}
-              label="Age"
-              onChange={(e) => setAge(e.target.value)}
-            >
-              <MenuItem value={15}>Under Fifteen</MenuItem>
-              <MenuItem value={20}>Fifteen to Twenty</MenuItem>
-              <MenuItem value={30}>Twenty to Thirty</MenuItem>
-              <MenuItem value={40}>Thirty to Fourty</MenuItem>
-              <MenuItem value={50}>Fourty to Fifty</MenuItem>
-              <MenuItem value={60}>fifty to Sixty Plus</MenuItem>
-              <MenuItem value={61}>Over 60</MenuItem>
-            </Select>
-</FormControl>
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={age}
+                label="Age"
+                onChange={(e) => setAge(e.target.value)}
+              >
+                <MenuItem value={15}>Under Fifteen</MenuItem>
+                <MenuItem value={20}>Fifteen to Twenty</MenuItem>
+                <MenuItem value={30}>Twenty to Thirty</MenuItem>
+                <MenuItem value={40}>Thirty to Fourty</MenuItem>
+                <MenuItem value={50}>Fourty to Fifty</MenuItem>
+                <MenuItem value={60}>fifty to Sixty Plus</MenuItem>
+                <MenuItem value={61}>Over 60</MenuItem>
+              </Select>
+            </FormControl>
             <Button
               type="submit"
               // variant="contained"
               // color="secondary"
               startIcon={<LoginIcon />}
-              sx={{ 
-                mt: 2, 
-              backgroundColor: 'secondary.main',
-            color: 'secondary.contrastText', 
-          '&:hover': { backgroundColor: 'secondary.dark' }
-         }}
+              sx={{
+                mt: 2,
+                backgroundColor: "secondary.main",
+                color: "secondary.contrastText",
+                "&:hover": { backgroundColor: "secondary.dark" },
+              }}
             >
               Submit
             </Button>

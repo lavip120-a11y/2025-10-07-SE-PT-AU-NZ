@@ -3,10 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  }
+}
 body {
   margin: 0;
-  background-color: #C0DAF0;
+  background-color: #c0daf0;
 }
 
 .logo {
@@ -45,23 +45,22 @@ body {
   color: #888;
 }
 
-.NavBar ul { 
-  display: flex; 
-  list-style: none; 
-  justify-content: center; 
-  padding: 0; 
+.NavBar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
 }
-.NavBar ul li a { 
-  padding: 1em; 
-  text-transform: uppercase; 
-  display: inline-block; 
-  text-decoration: none; 
-  
+.NavBar ul li a {
+  padding: 1em;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
 }
-.NavBar ul li a.active { 
-  font-weight: bold; 
-  }
+.NavBar ul li a.active {
+  font-weight: bold;
+}
 
-  .className {
-    color: #9CA3AF;
-  }
+.className {
+  color: #9ca3af;
+}

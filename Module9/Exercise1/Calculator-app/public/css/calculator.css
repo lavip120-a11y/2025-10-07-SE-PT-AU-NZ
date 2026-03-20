@@ -1,0 +1,17 @@
+body {
+        margin: 0;
+        padding: o;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(167, 184, 202);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+div {
+        padding: 24px;
+       
+        
+}   

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Placeholder Axios</title>
+  </head>
+  <body>
+    <h1>Check the console</h1>
+  </body>
+  <!-- need to include the axios script first -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script> <!--online referring to axios library-->
+  <script>
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts?_limit=10") // to use axios just use axios.get
+      .then((response) => console.log(response.data)); //response - what ever is recieved 
+    axios
+      .post("https://jsonplaceholder.typicode.com/posts", {
+        // POSTed data goes in the request body - second paramater is passing the JavaScript object
+        title: "The Studio",
+        body: "Something funny",
+        userId: 1,
+      })
+
+      .then((response) => console.log(response.data)); //this is a simplified way of using ?? methods
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculator Web Page</title>
+  </head>
+
+  <body>
+<div>
+    <label for="num1">Enter Number 1:</label>
+    <input type="text" name="num1" id="num1">
+</div>
+<div>
+    <label for="num2">Enter Number 2:</label>
+    <input type="text" name="num2" id="num2">
+</div>
+<div>
+    <label>Result</label>
+    <label id="result"></label>
+</div>
+<div> 
+    <button onclick="calculate()">Calculate</button> 
+</div>
+
+  <script>
+    function calculate() { //get the user entry, the calculation happens in the backend
+      
+        let num1 = document.getElementById("num1").value; //fetching the entries from the text boxes
+        let num2 = document.getElementById("num2").value;
+
+        fetch(`http://127.0.0.1:3000/calculator/add?num1=${num1}&num2=${num2}`) //fetch the url and substitute variable values with text box entries and use the backed add logic
+        .then((response) => response.json()) //response 
+        .then((json) => document.getElementById("result").innerText = json.result) //get the json and return the jsone.res in the result label
+        }
+  </script>
+    </body>
+</html>

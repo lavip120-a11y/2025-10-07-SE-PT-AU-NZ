@@ -1,13 +1,13 @@
-// this function returns the sum of twonumbers
-function sum(a, b) {}
+// this function returns the sum of two numbers
+function sum(a, b) {} //description
 // Create the Test
-if (sum(2, 4) != 6) {
+if (sum(2, 4) != 6) { //checking testing and comparing output
   throw new Error("Test failed");
 }
 if (sum(-1, -10) == -11) {
   console.log("Test Passed");
 }
-// Write the Code
+// Write the Code, function that does the adding
 function sum(a, b) {
   return a + b;
 }

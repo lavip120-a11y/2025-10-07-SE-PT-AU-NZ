@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Animation</title>
+</head>
+<body>
+    <style>
+p{
+    animation-name: slider; /*change to slidedown to see the slidedown function*/
+    animation-duration: 10s;
+    animation-iteration-count: 5;
+    animation-timing-function: 15s;
+}
+@keyframes slider{
+    0%{
+        margin-left: 0%;
+        background-color: red;
+    }
+    50%{
+        font-size: x-large;
+        background-color: orange;
+    }
+    100%{
+        margin-left: 100%;
+        background-color: blue;
+    }
+}
+@keyframes slidedown{ /*slide from top to bottom*/
+    from {
+        margin-top: 0%;
+        background-color: violet;
+    }
+    to {
+        margin-top: 100%;
+        background-color: orange;
+    }
+}
+a:hover {
+    background-color: red;
+}
+/* hover example on pg 77 module 4 */
+    </style>
+
+   <p>Hello World </p>
+   <a href="https://www.google.come">Visit</a>
+
+</body>
+</html>

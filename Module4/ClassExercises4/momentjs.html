@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moment Js</title>
+  </head>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+
+  <body>
+    <div id="dateShown"></div>
+  </body>
+  <script>
+   document.getElementById("dateShown").innerText = moment().format('MMMM'); //gets you normal date formats which you cannot get from JavaScript
+  document.getElementById("dateShown").innerText = moment("20020521").fromNow();
+  </script>
+</html>

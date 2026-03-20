@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/
+bootstrap.min.css" rel="stylesheet" integrity="sha384-
+4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJz
+QIu9" crossorigin="anonymous">
+</head>
+<body>
+<h1>Hello, world!</h1>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bo
+otstrap.bundle.min.js" integrity="sha384-
+HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhb
+grkm"
+crossorigin="anonymous"></script> <!--need this to plug in play from bootstrap-->
+
+<h1>Hello World</h1>
+<button type="button" class="btn btn-primary">Primary</button>
+<div class="row"> <!--divides a div into a row-->
+<div class="col-12">This is a whole row</div>
+</div>
+<div class="row">
+<div class="col-2">2 columns</div> 
+<div class="col-10">10 columns</div>
+</div>
+<div class="row">
+<div class="col bg-primary">column </div> <!--does not specify column size so divides equally across the columns present-->
+<div class="col bg-info">column 2</div>
+<div class="col bg-primary">column </div>
+</div>
+<div class="container-fluid bg-danger"> alway 100% wide </div> <!--breakpoints-->
+<div class="container-sm bg-primary">100% wide until small
+breakpoint</div>
+<div class="container-md bg-info">100% wide until medium
+breakpoint</div>
+<div class="container-lg bg-success">100% wide until large
+breakpoint</div>
+<div class="container-xl bg-danger">100% wide until extra large
+breakpoint</div>
+<div class="container-xxl bg-warning">100% wide until extra extra
+large breakpoint</div>
+<div class="row">
+<div class="col-12 col-sm-6 bg-info">column</div> <!--you can place content in the div too-->
+<div class="col-12 col-sm-6 bg-danger">column</div>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+</button>
+Launch demo modal
+<div class="modal fade" id="exampleModal" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+hello modal
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid"> <a class="navbar-brand" href="#">Navbar</a>
+<button class="navbar-toggler" type="button"
+
+data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-
+controls="navbarNav" aria-expanded="false"
+
+aria-label="Toggle navigation"><span class="navbar-toggler-
+icon"></span></button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link active" aria-current="page"
+href="#">Home</a>
+</li>
+<li class="nav-item"> <a class="nav-link" href="#">Features</a> </li>
+<li class="nav-item"><a class="nav-link" href="#">Pricing</a> </li>
+<li class="nav-item"> <a class="nav-link disabled">Disabled</a> </li>
+</ul>
+</div>
+</div>
+</body>
+</html>
